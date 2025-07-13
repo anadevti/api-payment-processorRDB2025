@@ -1,7 +1,10 @@
 package com.rdb.api_payment_processorRDB2025.repository;
 
 import com.rdb.api_payment_processorRDB2025.domain.entities.Payment;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PaymentRepository extends CrudRepository<Payment, Long> {
+import java.util.List;
+
+public interface PaymentRepository extends JpaRepository<Payment, Long> {
+    List<Payment> findByName(String name);
 }

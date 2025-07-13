@@ -15,4 +15,7 @@ public class Payment {
 
     @Column(name = "payment_value")
     private BigDecimal value;
+
+    @Column (name = "payment_name")
+    private String name;
 }
