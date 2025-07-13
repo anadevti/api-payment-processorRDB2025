@@ -7,9 +7,12 @@ import java.math.BigDecimal;
 @Entity
 @Table (name = "payments")
 public class Payment {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    @Column(name = "value")
-    BigDecimal value;
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "payment_value")
+    private BigDecimal value;
 }
